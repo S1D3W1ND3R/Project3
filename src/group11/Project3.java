@@ -58,7 +58,7 @@ public class Project3 {
                 System.out.printf("\t1.-attack with your axe?\n");
                 System.out.printf("\t2.-throw alchemist's fire?\n");
                 System.out.printf("\t3.-raise your shield?\n");
-                System.out.print("Please enter 1, 2, or 3:");
+                System.out.print("Please enter 1, 2, or 3: ");
                 attack = scanIn.nextInt();
             } while (attack != 1 && attack != 2 && attack != 3);
 

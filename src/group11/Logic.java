@@ -22,45 +22,28 @@ public class Logic {
     public String result() {
         String rolls = "";
 
-        //AXE: 10 dmg
         if (dwarfATK == 1) {
+            //AXE: 10 dmg
             rolls += "You hack at the elf with your axe, ";
-            //BOW: 10 dmg
-            if (elfATK == 1) {
-                rolls += "and he shoots at you with his bow.";
-                //SWORD: 5 
-            } else if (elfATK == 2) {
-                rolls += "and he swipes at you with his sword.";
-            } else {
-                rolls += "but he guards himself with a barrier of magic.";
-            }
-
         } else if (dwarfATK == 2) {
+            //ALFIRE: 5 dmg
             rolls += "You heave a jar of alchemist's fire at the elf, ";
-            //BOW: 10 dmg
-            if (elfATK == 1) {
-                rolls += "and he shoots at you with his bow.";
-                //SWORD: 5 dmg 
-            } else if (elfATK == 2) {
-                rolls += "and he swipes at you with his sword.";
-                //BARRIER: -5 incoming dmg
-            } else {
-                rolls += "but he guards himself with a barrier of magic.";
-            }
-
         } else {
+            //SHIELD: -5 incoming dmg
             rolls += "You raise your shield, ";
-            //BOW: 10 dmg
-            if (elfATK == 1) {
-                rolls += "and he shoots at you with his bow.";
-                //SWORD: 5 dmg 
-            } else if (elfATK == 2) {
-                rolls += "and he swipes at you with his sword.";
-                //BARRIER: -5 incoming dmg
-            } else {
-                rolls += "but he guards himself with a barrier of magic.";
-            }
         }
+
+        if (elfATK == 1) {
+            //BOW: 10 dmg
+            rolls += "and he shoots at you with his bow.";
+        } else if (elfATK == 2) {
+            //SWORD: 5 dmg 
+            rolls += "and he swipes at you with his sword.";
+        } else {
+            //BARRIER: -5 incoming dmg
+            rolls += "but he guards himself with a barrier of magic.";
+        }
+
         return rolls;
     }
 

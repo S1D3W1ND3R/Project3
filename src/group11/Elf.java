@@ -21,7 +21,7 @@ public class Elf {
     }
 
     public int getAttack() {
-        return (rand.nextInt(2) + 1);
+        return (rand.nextInt(3) + 1);
     }
 
     public int getHealth() {
